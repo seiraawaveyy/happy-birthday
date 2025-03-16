@@ -30,16 +30,16 @@
             text-align: center;
             position: relative;
             width: 90%;
-            max-width: 400px;
+            max-width: 450px;
         }
 
         .background-image {
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 350px;
             background: url('Grid-pattern.png') no-repeat center;
             background-size: contain;
-            top: 10px; /* Biar ga terlalu ke atas */
+            top: 10px; 
             left: 50%;
             transform: translateX(-50%);
             z-index: -1;
@@ -47,18 +47,18 @@
 
         .welcome {
             font-family: 'DePixelHalbfett', sans-serif;
-            font-size: 36px;
+            font-size: 48px;
             color: #f10050;
             position: relative;
-            text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+            text-shadow: -5px -5px 0 white, 5px -5px 0 white, -5px 5px 0 white, 5px 5px 0 white;
         }
 
         .cake {
-            width: 250px;
+            width: 350px; /* Lebih besar */
             animation: pulse 1.5s infinite alternate;
             display: block;
-            margin: 15px auto;
-            filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white);
+            margin: 20px auto;
+            filter: drop-shadow(4px 4px 0 white) drop-shadow(-4px -4px 0 white);
         }
 
         @keyframes pulse {
@@ -71,13 +71,12 @@
         }
 
         input {
-            padding: 8px;
+            padding: 6px;
             border: 2px solid #f10050;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 12px;
             font-family: 'DePixelHalbfett', sans-serif;
-            width: 80%;
-            max-width: 200px;
+            width: 140px; /* Dikecilkan */
             text-align: center;
             color: #ff5e94;
             background-color: white;
@@ -94,51 +93,52 @@
         }
 
         button {
-            padding: 6px 14px;
+            padding: 4px 10px;
             border: 2px solid #f10050;
             background-color: #ff8cb2;
             color: white;
-            font-size: 14px;
+            font-size: 12px;
             font-family: 'DePixelHalbfett', sans-serif;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .note {
-            width: 80%;
-            max-width: 300px;
-            margin: 15px auto;
+            width: 90%; /* Lebih besar */
+            max-width: 380px;
+            margin: 20px auto;
         }
 
         /* Media Query untuk iPhone */
         @media screen and (max-width: 430px) {
             body {
-                padding-top: 30px; /* Biar ga terlalu nempel atas */
+                padding-top: 30px;
             }
             
             .welcome {
-                font-size: 28px;
+                font-size: 36px;
             }
 
             .cake {
-                width: 220px;
+                width: 320px;
             }
 
             input {
-                font-size: 12px;
-                padding: 6px;
+                font-size: 10px;
+                padding: 5px;
+                width: 120px; /* Lebih kecil di iPhone */
             }
 
             button {
-                font-size: 12px;
-                padding: 5px 12px;
+                font-size: 10px;
+                padding: 4px 8px;
             }
 
             .background-image {
-                width: 250px;
-                height: 250px;
-                top: 20px;
+                width: 280px;
+                height: 280px;
+                top: 15px;
             }
         }
     </style>
