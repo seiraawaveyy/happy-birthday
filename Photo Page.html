@@ -13,57 +13,69 @@
 
         body {
             background: url('Background.png') repeat;
-            background-size: contain;
+            background-size: cover;
             font-family: 'DePixelHalbfett', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             min-height: 100vh;
             margin: 0;
             text-align: center;
-        }
-
-        .background-box {
-            position: absolute;
-            top: 3%;
-            width: 65%;
-            height: 95%;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             padding: 20px;
         }
 
+        .background-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Sesuaikan ukuran, bisa 60% jika ingin lebih kecil */
+    min-height: 85vh; /* Mengikuti konten tapi tetap besar */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    z-index: -1;
+}
+
         .title {
-            font-size: 20px;
+            font-size: 24px;
             color: #ff0080;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
         }
 
         .photo {
-            width: 350px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
         }
 
-        .message1 {
-            position: relative;
-            font-size: 10px;
+        .message1, .message2 {
+            font-size: 14px;
             color: #ff0080;
-            margin-top: 5px;
-            margin-bottom: 0px;
+            margin-top: 8px;
         }
 
-        .message2 {
-            font-size: 10px;
-            color: #ff0080;
-            margin-top: 2px;
-            margin-bottom: 2px;
-   
+        /* Media Query untuk tampilan HP */
+        @media screen and (max-width: 430px) {
+            .title {
+                font-size: 20px;
+            }
+
+            .photo {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .message1, .message2 {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -74,12 +86,6 @@
         <p class="message1">Segenap hati ini mengucapkan..</p>
         <p class="message2">Sayang kamu banget</p>
     </div>
-
-    <script>
-        function goToPage5() {
-            window.location.href = 'page5.html';
-        }
-    </script>
 
 </body>
 </html>
