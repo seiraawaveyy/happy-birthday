@@ -25,21 +25,23 @@
             margin: 0;
             text-align: center;
         }
-          .background-box {
-            position: absolute;
-            top: 3%;
-            width: 65%;
-            height: 95%;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
-
+         .background-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* Bisa diubah ke 70vw atau 60vw untuk lebih kecil */
+    min-height: 80vh; /* Bisa disesuaikan */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 0;
+}
         .container {
             position: relative;
             z-index: 1;
