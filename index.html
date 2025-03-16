@@ -18,12 +18,12 @@
             background-position: center;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center; /* Tengah vertikal */
-            align-items: center; /* Tengah horizontal */
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
             height: 100vh;
             margin: 0;
-            padding-top: 50px; /* Supaya tidak terlalu atas */
+            padding-top: 50px;
         }
 
         .container {
@@ -35,8 +35,8 @@
 
         .background-image {
             position: absolute;
-            width: 350px;
-            height: 350px;
+            width: 450px; /* Dibesarkan */
+            height: 450px;
             background: url('Grid-pattern.png') no-repeat center;
             background-size: contain;
             top: 10px; 
@@ -54,7 +54,7 @@
         }
 
         .cake {
-            width: 350px; /* Lebih besar */
+            width: 200px; /* Dikecilkan */
             animation: pulse 1.5s infinite alternate;
             display: block;
             margin: 20px auto;
@@ -76,7 +76,7 @@
             border-radius: 5px;
             font-size: 12px;
             font-family: 'DePixelHalbfett', sans-serif;
-            width: 140px; /* Dikecilkan */
+            width: 140px;
             text-align: center;
             color: #ff5e94;
             background-color: white;
@@ -105,7 +105,7 @@
         }
 
         .note {
-            width: 90%; /* Lebih besar */
+            width: 90%;
             max-width: 380px;
             margin: 20px auto;
         }
@@ -121,13 +121,13 @@
             }
 
             .cake {
-                width: 320px;
+                width: 180px; /* Kue lebih kecil di iPhone */
             }
 
             input {
                 font-size: 10px;
                 padding: 5px;
-                width: 120px; /* Lebih kecil di iPhone */
+                width: 120px;
             }
 
             button {
@@ -136,8 +136,8 @@
             }
 
             .background-image {
-                width: 280px;
-                height: 280px;
+                width: 420px; /* Grid-pattern lebih besar */
+                height: 420px;
                 top: 15px;
             }
         }
