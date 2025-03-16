@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Heart.png">
+    <title>Happy Birthday!</title>
+    <style>
+        @font-face {
+            font-family: 'DePixelHalbfett';
+            src: url('DePixelHalbfett.ttf') format('truetype');
+        }
+
+        body {
+            background: url('background.png') repeat;
+            background-size: contain;
+            font-family: 'DePixelHalbfett', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .background-box {
+            position: absolute;
+            top: 3%;
+            width: 65%;
+            max-width: 400px;
+            height: 95%;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #ff0080;
+            margin-bottom: 5px;
+            text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+        }
+
+        .letter {
+            width: 300px;
+        }
+
+        .message1 {
+            font-size: 10px;
+            color: #ff0080;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .message2 {
+            font-size: 14px;
+            color: #ff0080;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .yes-button {
+            font-size: 15px;
+            color: white;
+            background: #ff0080;
+            padding: 8px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 0px;
+            text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .yes-button:hover {
+            transform: scale(1.1);
+            background: #e00070;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-box">
+             <audio autoplay loop>
+     <source src="Cat Bday.mp3" type="audio/mpeg">
+</audio>
+
+        <h1 class="title">HAPPY BIRTHDAY!!</h1>
+        <p class="message1">Download gambar untuk membaca lebih detail!</p>
+        <img src="Letter.png" alt="Surat Ulang Tahun" class="letter">
+        <p class="message2">Ada foto juga nih! Ayo lihat!</p>
+        <div class="yes-button" onclick="goToPage5()">YES</div>
+    </div>
+
+    <script>
+        function goToPage5() {
+            window.location.href = 'Photo Page.html';
+        }
+    </script>
+
+</body>
+</html>
