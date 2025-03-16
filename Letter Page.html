@@ -26,18 +26,22 @@
         }
 
         .background-box {
-            position: relative;
-            width: 90%;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Sesuaikan ukuran, bisa 60% jika ingin lebih kecil */
+    min-height: 85vh; /* Mengikuti konten tapi tetap besar */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    z-index: -1; /* Supaya tetap di belakang elemen lain */
+}
 
         .title {
             font-size: 28px;
