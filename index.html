@@ -14,51 +14,51 @@
 
         body {
             background: url('Background.png') repeat;
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Biar kontennya di atas */
             align-items: center;
-            min-height: 100vh;
+            flex-direction: column;
+            height: 100vh;
             margin: 0;
+            padding-top: 20px; /* Supaya tidak terlalu mepet ke atas */
         }
 
         .container {
             text-align: center;
             position: relative;
+            width: 90%;
+            max-width: 400px;
         }
-               .background-image {
+
+        .background-image {
             position: absolute;
-            width: 380px;
-            height: 380px;
+            width: 300px;
+            height: 300px;
             background: url('Grid-pattern.png') no-repeat center;
             background-size: contain;
-            top: 0%; 
+            top: -20px; /* Lebih ke atas */
             left: 50%;
-            transform: translate(-50%, 0);
+            transform: translateX(-50%);
             z-index: -1;
         }
 
-
         .welcome {
             font-family: 'DePixelHalbfett', sans-serif;
-            font-size: 45px;
+            font-size: 36px;
             color: #f10050;
             position: relative;
-            z-index: 1;
-            text-shadow: -5px -5px 0 white, 5px -5px 0 white, -5px 5px 0 white, 5px 5px 0 white;
+            text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
         }
 
         .cake {
-            width: 300px; 
+            width: 250px;
             animation: pulse 1.5s infinite alternate;
             display: block;
-            margin: -5px auto 0;
-            position: relative;
-            z-index: 1;
+            margin: 10px auto;
             filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white);
-            image-rendering: crisp-edges;
         }
 
         @keyframes pulse {
@@ -67,19 +67,19 @@
         }
 
         form {
-            margin-top: 30px;
-            position: relative;
-            z-index: 2;
+            margin-top: 15px;
         }
 
         input {
             padding: 8px;
-            border: 3px solid #f10050;
+            border: 2px solid #f10050;
             border-radius: 5px;
             font-size: 14px;
             font-family: 'DePixelHalbfett', sans-serif;
-            width: 180px;
-            color: #ffb6c1;
+            width: 80%;
+            max-width: 200px;
+            text-align: center;
+            color: #ff5e94;
             background-color: white;
         }
 
@@ -88,29 +88,57 @@
         }
 
         input:focus {
-        ackground-color: white;
-            color: #ff5e94;
+            color: #f10050;
             outline: none;
-            box-shadow: none;
-            border: 3px solid #f10050;
+            border-color: #f10050;
         }
 
         button {
-            padding: 5px 14px;
-            border: 3px solid #f10050;
+            padding: 6px 14px;
+            border: 2px solid #f10050;
             background-color: #ff8cb2;
             color: white;
             font-size: 14px;
             font-family: 'DePixelHalbfett', sans-serif;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
-        
+
         .note {
-            width: 400px;
-            display: block;
+            width: 80%;
+            max-width: 300px;
             margin: 15px auto;
-            border: 1px solid #f10050;
+        }
+
+        /* Media Query untuk iPhone */
+        @media screen and (max-width: 430px) {
+            body {
+                padding-top: 10px;
+            }
+            
+            .welcome {
+                font-size: 28px;
+            }
+
+            .cake {
+                width: 220px;
+            }
+
+            input {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 5px 12px;
+            }
+
+            .background-image {
+                width: 250px;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -127,17 +155,17 @@
     </div>
     <script>
         document.getElementById('nameForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const validNames = ["Raja cellshade", "Sepuh anatomi", "Sensei alex", "Sensei kevin", "raja cellshade", "sepuh anatomi", "sensei kevin", "sensei alex"];
-    const nameInput = document.getElementById('nameInput').value.trim();
-    
-    if (validNames.includes(nameInput)) {
-        window.location.href = 'Yeyyy Page.html';
-    } else {
-        window.location.href = 'Nooo Page.html';
-    }
-    });
-</script>
+            event.preventDefault();
+            
+            const validNames = ["Raja cellshade", "Sepuh anatomi", "Sensei alex", "Sensei kevin", "raja cellshade", "sepuh anatomi", "sensei kevin", "sensei alex"];
+            const nameInput = document.getElementById('nameInput').value.trim();
+            
+            if (validNames.includes(nameInput)) {
+                window.location.href = 'Yeyyy Page.html';
+            } else {
+                window.location.href = 'Nooo Page.html';
+            }
+        });
+    </script>
 </body>
 </html>
