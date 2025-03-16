@@ -14,53 +14,42 @@
 
         body {
             background: url('Background.png') repeat;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 50vh;
             margin: 0;
             text-align: center;
-            position: relative;
+        }
+          .background-box {
+            position: absolute;
+            top: 3%;
+            width: 65%;
+            height: 95%;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
         }
 
-.background-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw; 
-    min-height: 80vh;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    z-index: 0;
-}
-
-.container {
-    position: relative;
-    z-index: 1;
-    width: 90%;
-    max-width: 600px;
-    margin-top: 0; /* Hilangkan jarak dari atas */
-    padding-top: 10px; /* Beri sedikit padding biar nggak mepet banget */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .container {
+            position: relative;
+            z-index: 1;
+            margin-top: 10vh;
+        }
 
         .letter {
-            width: 50vw;
-            max-width: 300px;
-            margin: 20px 0;
+            width: 300px;
+            margin-top: 50px;
+            margin-bottom: 50px;
             cursor: pointer;
             transition: transform 0.5s ease-in-out;
             filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white);
@@ -71,28 +60,60 @@
             transform: scale(1.1);
         }
 
+
         @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
         }
 
-        .message1, .message2, .message3, .message4, .message5 {
+
+        .message1 {
+            position: relative;
             font-family: 'DePixelHalbfett', sans-serif;
+            font-size: 24px;
+            color: #ff2d6f;
+            margin-top: 2px;
+            margin-bottom:2px;
             text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
         }
 
-        .message1 { font-size: 6vw; color: #ff2d6f; }
-        .message2 { font-size: 5vw; color: #ff2d6f; }
-        .message3 { font-size: 3vw; color: #ff2d6f; }
-        .message4 { font-size: 4vw; color: #ff2d6f; margin-top: 5vh; }
-        .message5 { font-size: 2.5vw; color: #ff2d6f; }
+        .message2 {
+            font-family: 'DePixelHalbfett', sans-serif;
+            font-size: 24px;
+            color: #ff2d6f;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+        }
 
-        @media (min-width: 768px) {
-            .message1 { font-size: 36px; }
-            .message2 { font-size: 28px; }
-            .message3 { font-size: 14px; }
-            .message4 { font-size: 20px; }
-            .message5 { font-size: 12px; }
+        .message3 {
+            font-family: 'DePixelHalbfett', sans-serif;
+            font-size: 12px;
+            color: #ff2d6f;
+            margin-top: 1px;
+            margin-bottom: 20px;
+            text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+        }
+
+        .message4 {
+            font-family: 'DePixelHalbfett', sans-serif;
+            font-size: 18px;
+            color: #ff2d6f;
+            margin-top: 90px;
+            margin-bottom: 4px;
+            text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+        }
+
+        .message5 {
+            font-family: 'DePixelHalbfett', sans-serif;
+            font-size: 13px;
+            color: #ff2d6f;
+            margin-top: 5px;
+            text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
         }
     </style>
 </head>
