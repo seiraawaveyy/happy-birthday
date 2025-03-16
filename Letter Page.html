@@ -13,7 +13,7 @@
 
         body {
             background: url('Background.png') repeat;
-            background-size: contain;
+            background-size: cover;
             font-family: 'DePixelHalbfett', sans-serif;
             display: flex;
             justify-content: center;
@@ -22,14 +22,14 @@
             min-height: 100vh;
             margin: 0;
             text-align: center;
+            padding: 20px;
         }
 
         .background-box {
-            position: absolute;
-            top: 3%;
-            width: 65%;
-            height: 95%;
-            background: rgba(255, 255, 255, 0.5);
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -40,61 +40,76 @@
         }
 
         .title {
-            font-size: 24px;
+            font-size: 28px;
             color: #ff0080;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
         }
 
         .letter {
-            width: 350px;
+            width: 90%;
+            max-width: 350px;
+            border-radius: 10px;
         }
 
-        .message1 {
-            position: relative;
-            font-size: 10px;
-            color: #ff0080;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .message2 {
+        .message1, .message2 {
             font-size: 14px;
             color: #ff0080;
-            margin-top: 10px;
-            margin-bottom: 2px;
+            margin-top: 8px;
         }
 
         .yes-button {
-            font-size: 15px;
+            font-size: 16px;
             color: white;
             background: #ff0080;
-            padding: 8px 10px;
+            padding: 10px 14px;
             border-radius: 10px;
             cursor: pointer;
-            margin-top: 3px;
+            margin-top: 12px;
             text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
             transition: transform 0.2s, background 0.2s;
+            border: none;
+            outline: none;
         }
 
         .yes-button:hover {
             transform: scale(1.1);
             background: #e00070;
         }
+
+        /* Media Query untuk iPhone dan layar kecil */
+        @media screen and (max-width: 430px) {
+            .title {
+                font-size: 24px;
+            }
+
+            .message1, .message2 {
+                font-size: 12px;
+            }
+
+            .letter {
+                width: 85%;
+            }
+
+            .yes-button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="background-box">
-             <audio autoplay loop>
-     <source src="Cat Bday.mp3" type="audio/mpeg">
-</audio>
+        <audio autoplay loop>
+            <source src="Cat Bday.mp3" type="audio/mpeg">
+        </audio>
 
         <h1 class="title">HAPPY BIRTHDAY!!</h1>
         <p class="message1">Download gambar untuk membaca lebih detail!</p>
         <img src="Letter.png" alt="Surat Ulang Tahun" class="letter">
         <p class="message2">Ada foto juga nih! Ayo lihat!</p>
-        <div class="yes-button" onclick="goToPage5()">YES</div>
+        <button class="yes-button" onclick="goToPage5()">YES</button>
     </div>
 
     <script>
